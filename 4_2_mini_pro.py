@@ -29,6 +29,10 @@ car_df.drop(['title_y'],axis=1, inplace=True)
 car_df.rename({'title_x':'title'}, axis=1, inplace=True)
 # %%
 car_df.head()
+#%%
+car_df.duplicated()
+# %%
+car_df.drop_duplicates()
 # %%
 bonus_df = car_df.copy()
 # %%
@@ -180,5 +184,6 @@ bonus_df
 # %%
 bonus_df.groupby('country')['brand'].nunique()
 # %%
-bonus_df.corr()
+num_df = bonus_df.select_dtypes(include='number')
+num_df.corr()
 # %%
