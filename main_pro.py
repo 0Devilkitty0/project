@@ -194,18 +194,7 @@ cc_df.head()
 # %%
 cc_df['category'].nunique()
 
-#%%
-#################################################
-cc_df
 # %%
-gen_amt = cc_df.groupby('gender')['amt'].agg(['mean','std']).reset_index()
-# %%
-gen_amt
-# %%
-cc_df = cc_df.merge(gen_amt, on='gender', how='left')
-
-#################################################
-# # %%
 cc_df
 # %%
 cc_df['gen_amt_z'] = (cc_df['distance'] - cc_df['mean']) / cc_df['std']
