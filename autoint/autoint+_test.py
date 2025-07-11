@@ -292,11 +292,11 @@ field_dims = np.max(movielens_rcmm[u_i_feature + meta_features].astype(np.int64)
 field_dims
 # %%
 # 에포크, 학습률, 드롭아웃, 배치사이즈, 임베딩 크기 등 정의
-epochs=5
-learning_rate= 0.0001
-dropout= 0.4
-batch_size = 2048
-embed_dim= 16
+epochs=10
+learning_rate= 0.0005
+dropout= 0.2
+batch_size = 2000
+embed_dim= 20
 # %%
 # AutoInt 레이어를 가지고 있는 모델 본체입니다. 해당 모델을 활용해 훈련을 진행합니다.
 class AutoIntModel(Model):
